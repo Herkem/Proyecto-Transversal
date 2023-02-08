@@ -11,17 +11,23 @@
 
 <body>
     <header>
+        <div id="header-jump">
+            <a href="#main">Go to the Web Page Body</a>
+        </div>
+
         <div id="header-info">
             <div>
-                <div>
-                    <select name="idioma" id="idioma">
+                <div class="language-select">
+                    <label for="language">Language</label>
+                    <select name="language" id="language">
                         <option value="Español">Español</option>
                         <option value="English" selected>English</option>
                     </select>
                 </div>
 
-                <div>
-                    <select name="moneda" id="moneda">
+                <div class="currency-select">
+                    <label for="currency">Currency</label>
+                    <select name="currency" id="currency">
                         <option value="Euro">Euro</option>
                         <option value="Dollar" selected>Dollar</option>
                     </select>
@@ -59,8 +65,7 @@
             </div>
 
             <div>
-                <h1>ekommart</h1>
-                <img src="images/header/logo.png" alt="logo">
+                <h1>Ekommart</h1>
             </div>
 
             <div>
@@ -73,7 +78,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav aria-label="header-navigation">
         <ul>
             <li><a href="#" style="color: var(--primary-color);">Home</a></li>
             <li><a href="web_map.html">Web Map</a></li>
@@ -83,42 +88,44 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="main">
         <section id="news">
             <h2>News</h2>
-            <article class="first-elem">
-                <div>
-                    <div>LATEST TRENDS</div>
-                    <h3>SEASON'S Newest Arrivals</h3>
-                    <div><a href="#">SHOP NOW</a></div>
-                </div>
-            </article>
-
-            <article class="second-elem">
-                <div>
-                    <div>SUNWASHED PINK</div>
-                    <h3>REAL SIMPLE</h3>
-                </div>
-            </article>
-
-            <article class="third-elem">
-                <div>
-                    <div><strong>MIXES CROCHET</strong></div>
-                    <h3>Crochet bead bracelet</h3>
-                </div>
-            </article>
-
-            <article class="fourth-elem">
-                <div>
-                    <div class="thunder">
-                        <img src="images/thunder.png" alt="thunder">
-                        <span><strong>NEW</strong></span>
+            <div>
+                <article class="first-elem" aria-label="news-article-1">
+                    <div>
+                        <div>LATEST TRENDS</div>
+                        <h3>SEASON'S Newest Arrivals</h3>
+                        <div><a href="#">SHOP NOW</a></div>
                     </div>
-                    <h3>Fruit bowl earrings</h3>
-                    <div>Titanium post with disc clutch closures.</div>
-                    <div><a href="#">Shop Now</a></div>
-                </div>
-            </article>
+                </article>
+    
+                <article class="second-elem" aria-label="news-article-2">
+                    <div>
+                        <div>SUNWASHED PINK</div>
+                        <h3>REAL SIMPLE</h3>
+                    </div>
+                </article>
+    
+                <article class="third-elem" aria-label="news-article-3">
+                    <div>
+                        <div><strong>MIXES CROCHET</strong></div>
+                        <h3>Crochet bead bracelet</h3>
+                    </div>
+                </article>
+    
+                <article class="fourth-elem" aria-label="news-article-4">
+                    <div>
+                        <div class="thunder">
+                            <img src="images/thunder.png" alt="thunder">
+                            <span><strong>NEW</strong></span>
+                        </div>
+                        <h3>Fruit bowl earrings</h3>
+                        <div>Titanium post with disc clutch closures.</div>
+                        <div><a href="#">Shop Now</a></div>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="audio">
@@ -135,7 +142,7 @@
             <div>Picked for you</div>
 
             <div class="flex">
-                <article>
+                <article aria-label="must-article-1">
                     <a href="#"><img src="images/must_img1.png" alt="Fleece Badge Of Sport Graphic Hoodie"></a>
                     <img src="images/rating.png" alt="rating" class="rating">
                     <div class="categories">
@@ -149,7 +156,7 @@
                     <div class="price">$40.00</div>
                 </article>
 
-                <article>
+                <article aria-label="must-article-2">
                     <a href="#"><img src="images/must_img2.png" alt="Men's Rugged Workwear Graphic Hoodie"></a>
                     <img src="images/rating.png" alt="rating" class="rating">
                     <div class="categories">
@@ -162,7 +169,7 @@
                     <div class="price">$59.99</div>
                 </article>
 
-                <article>
+                <article aria-label="must-article-3">
                     <a href="#"><img src="images/must_img3.png" alt="Men's Rain Defender Rockland Sherpa-Lined"></a>
                     <img src="images/rating.png" alt="rating" class="rating">
                     <div class="categories">
@@ -177,7 +184,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article aria-label="must-article-4">
                     <a href="#"><img src="images/must_img4.png" alt="Men's Sportwear 2019 Hooded Windrunner Jacket"></a>
                     <img src="images/rating.png" alt="rating" class="rating">
                     <div class="subcategory">Running</div>
@@ -206,7 +213,7 @@
                     </div>
 
                     <div class="articles">
-                        <article>
+                        <article aria-label="popular-article-1">
                             <a href="#"><img src="images/popular_img1.png" alt="popular1"></a>
                             <img src="images/rating.png" alt="rating" class="rating">
                             <div class="subcategory">Running</div>
@@ -216,7 +223,7 @@
                             <div class="price">$40.00</div>
                         </article>
 
-                        <article>
+                        <article aria-label="popular-article-2">
                             <a href="#"><img src="images/popular_img2.png" alt="popular2"></a>
                             <img src="images/rating.png" alt="rating" class="rating">
                             <div class="subcategory">Outwear</div>
@@ -226,7 +233,7 @@
                             <div class="price">$59.99</div>
                         </article>
 
-                        <article>
+                        <article aria-label="popular-article-3">
                             <a href="#"><img src="images/popular_img3.png" alt="popular3"></a>
                             <img src="images/rating.png" alt="rating" class="rating">
                             <div class="subcategory">Sweatshirt</div>
@@ -239,7 +246,7 @@
                     </div>
                 </div>
 
-                <article class="last-article">
+                <article class="last-article" aria-label="popular-article-4">
                     <img src="images/popular_img4.png" alt="popular4">
                     <div>
                         <div>Accessory pick</div>
@@ -253,7 +260,7 @@
         <section id="ads">
             <h2>Ads</h2>
             <div>
-                <article>
+                <article aria-label="ads-article-1">
                     <img src="images/anuncio1.png" alt="ads1">
                     <div class="first-text-item">
                         <div>FASHION</div>
@@ -262,7 +269,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article aria-label="ads-article-2">
                     <img src="images/anuncio2.png" alt="ads2">
                     <div class="second-text-item">
                         <h3>20% OFF</h3>
@@ -270,7 +277,7 @@
                     </div>
                 </article>
 
-                <article>
+                <article aria-label="ads-article-3">
                     <img src="images/anuncio3.png" alt="ads3">
                     <div class="third-text-item">
                         <div>
@@ -291,34 +298,34 @@
         <div id="miscellaneous">
             <section class="stories">
                 <h2>Top Stories</h2>
-                <article>
+                <article aria-label="stories-article-1">
                     <img src="images/stories_img1.png" alt="storie1">
                     <div>
                         <span>Performance</span>
                         <a href="#">
-                            <h5>Refining your website's user experience in 3 steps</h5>
+                            <h3>Refining your website's user experience in 3 steps</h3>
                         </a>
                         <span>28 Jun,2019 · by Administrator</span>
                     </div>
                 </article>
 
-                <article>
+                <article aria-label="stories-article-2">
                     <img src="images/stories_img2.png" alt="storie2">
                     <div>
                         <span>Media</span>
                         <a href="#">
-                            <h5>Improving customer support with our Google Operations Center</h5>
+                            <h3>Improving customer support with our Google Operations Center</h3>
                         </a>
                         <span>28 Jun,2019 · by Administrator</span>
                     </div>
                 </article>
 
-                <article>
+                <article aria-label="stories-article-3">
                     <img src="images/stories_img3.png" alt="storie3">
                     <div>
                         <span>Resource</span>
                         <a href="#">
-                            <h5>Puttin you in control: our work in privacy this year</h5>
+                            <h3>Puttin you in control: our work in privacy this year</h3>
                         </a>
                         <span>28 Jun,2019 · by Administrator</span>
                     </div>
@@ -331,12 +338,12 @@
                     <img src="images/separator.png" alt="separator">
                 </div>
 
-                <article>
+                <article aria-label="testimonials-article">
                     <p>
                         Create stunning images with as much or as little control as you
                         like thanks to a choice of Basic and Creative modes.
                     </p>
-                    <div><strong>SEAN MORRISON</strong></div>
+                    <div><h3><strong>SEAN MORRISON</strong></h3></div>
                     <div>Photographer</div>
                 </article>
             </section>
@@ -375,7 +382,7 @@
         </div>
 
         <div>
-            <nav>
+            <nav aria-label="footer-navigation">
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="web_map.html">WEB MAP</a></li>
@@ -394,10 +401,10 @@
                         </linearGradient>
                     </defs>
                     <circle cx="22" cy="22" r="20" fill="url(#grad)" />
-                    <text x="10" y="27" font-size="20" fill="black"
-                        style="font-family: var(--primary-font); text-shadow: 2px 2px 4px var(--aux-color)">S</text>
-                    <text x="23" y="27" font-size="20" fill="black"
-                        style="font-family: var(--primary-font); text-shadow: 2px 2px 4px var(--aux-color);">L</text>
+                    <text x="10" y="27" font-size="20" fill="white"
+                        style="font-family: var(--primary-font);">S</text>
+                    <text x="23" y="27" font-size="20" fill="white"
+                        style="font-family: var(--primary-font);">L</text>
                 </svg>
                 Copyright &#169 2020 <a href="#">ekommart</a>. All Rights Reserved.
             </span>

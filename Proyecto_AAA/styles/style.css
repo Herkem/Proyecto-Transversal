@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 :root {
-    --primary-color: #84e2c7;
-    --secondary-color: #3078c0;
-    --aux-color: #B0B0B0;
+    --primary-color: #A30A82;
+    --secondary-color: #24598F;
+    --aux-color: #575757;
     --primary-font: 'Varela Round';
 }
 
@@ -19,6 +19,10 @@ strong {
 a {
     text-decoration: none;
     color: black;
+}
+
+a:focus {
+    border: 1px solid black;
 }
 
 section:not(.newsletter) {
@@ -50,13 +54,18 @@ header {
     flex-direction: column;
 }
 
-header h1 {
-    display: none;
-}
-
 header select {
     border: none;
     font-size: 1em;
+}
+
+#header-jump {
+    align-self: flex-end;
+    height: 30px;
+}
+
+#header-jump a {
+    text-decoration: underline;
 }
 
 #header-info {
@@ -66,6 +75,12 @@ header select {
     font-size: 0.9em;
 
     height: 50px;
+}
+
+#header-info .language-select,
+#header-info .currency-select {
+    display: flex;
+    flex-direction: column;
 }
 
 #header-info div:first-of-type {
@@ -101,7 +116,8 @@ header select {
 }
 
 #header-main-title,
-#header-info {
+#header-info,
+#header-jump {
     padding: 0 16% 0 16%;
 }
 
@@ -157,15 +173,22 @@ nav a:hover {
 /*
  * NEWS STYLES
  */
-#news h2,
-#ads h2 {
-    display: none;
-}
-
 #news {
     background-image: url('../images/news_bg.png');
     background-repeat: no-repeat;
 
+    display: flex;
+    flex-direction: column;
+
+    padding: 2em;
+    min-height: 700px;
+}
+
+#news h2 {
+    align-self: center;
+}
+
+#news>div:first-of-type {
     display: grid;
     grid-template-columns: 26% 19% 30%;
     grid-template-rows: 35% 55%;
@@ -174,8 +197,7 @@ nav a:hover {
     box-sizing: border-box;
     justify-content: center;
     align-content: center;
-    padding: 2em;
-    min-height: 650px;
+    min-height: 550px;
 }
 
 #news article {
@@ -226,7 +248,7 @@ nav a:hover {
 }
 
 #news .first-elem>div div:last-of-type {
-    background-color: #E67974;
+    background-color: #A6231C;
     font-size: 0.8em;
     padding-top: 5%;
 
@@ -378,7 +400,7 @@ nav a:hover {
 
 #must .categories .sale {
     color: white;
-    background-color: red;
+    background-color: #B30000;
 }
 
 /*
@@ -454,6 +476,12 @@ nav a:hover {
 /*
  * ADS STYLES   
  */
+#ads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #ads a {
     color: white;
 }
@@ -464,12 +492,11 @@ nav a:hover {
     margin-right: auto;
     margin-left: auto;
     color: white;
-
-    max-width: 1290px;
 }
 
 #ads>div article {
     position: relative;
+    margin-right: 1.6em;
 }
 
 #ads .first-text-item {
@@ -598,7 +625,7 @@ nav a:hover {
     color: var(--aux-color);
 }
 
-.stories h5 {
+.stories h3 {
     margin: 0.3em 0 0.3em 0;
     color: black;
     font-size: 1em;
@@ -675,6 +702,10 @@ nav a:hover {
     cursor: pointer;
 }
 
+.newsletter form input:last-of-type:focus {
+    border: 1px solid black;
+}
+
 /*
  * NESWLETTER STYLES
  */
@@ -707,7 +738,8 @@ footer {
 }
 
 footer span a {
-    color: var(--primary-color)
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 footer div:nth-child(2) {
